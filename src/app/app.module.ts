@@ -40,7 +40,7 @@ const tableDataProviderConfig: TableDataProviderConfig = {
     }                    
 }
 
-// Define custom components as a map of [custom column kind] : the component type
+// Define custom components as a map of 'custom column kind' : 'the component type'
 // Later in application you could define this custom column in tables as `{kind: 'AppStatusColumn'}`
 // Here you configured mapping and could start to use it right away but when you will 
 // try to include it in table definition you will get typescript compilation error.
