@@ -28,7 +28,7 @@ const table = (statusClick$: Subject<any>): AppModels.AppTableDescription => ({
               status: (val, row) => {
                 return val ? 'fail' : 'success';
               },
-              // Any output event of the component could be bind to ths Subject object
+              // Any output event of the component could be bind to the Subject object
               clicked: statusClick$
             }
         }
