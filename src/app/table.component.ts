@@ -8,7 +8,7 @@ import { AppModels } from './app.models';
 // This type is extended from default TableDescription type
 // Now we could use any configured custom column types (see app.module)
 // in any table definition.
-const table = (statusClick$: Subject<any>): AppModels.AppTableDefinition => ({
+const table = (statusClick$: Subject<any>): AppModels.TableDefinition => ({
     cols: [
         {
             id: 'title',            
@@ -26,7 +26,7 @@ const table = (statusClick$: Subject<any>): AppModels.AppTableDefinition => ({
               // It is possible to use for binding row itself as optional second parameter
               // Any component input property mapped to custom cell could be bind to cell value the same way   
               status: (val, row) => {
-                return val ? 'fail' : 'success';
+                return (val ? 'fail' : 'success') as any;
               },
               // Any output event of the component could be bind to the Subject object
               clicked: statusClick$
