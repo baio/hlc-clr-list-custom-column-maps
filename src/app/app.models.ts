@@ -1,11 +1,13 @@
 
 import { Table, TableDescription } from '@ng-holistic/clr-list';
 import { Status } from './status.component';
+import { Observable } from 'rxjs';
 
 export namespace AppModels {
 
   export interface AppStatusColumnProps {
     status: Status;
+    clicked: Observable<any>
   }
 
   export interface AppStatusColumn extends Table.MapColumns.MapColumn<AppStatusColumnProps> {

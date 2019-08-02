@@ -8,7 +8,7 @@ import { AppModels } from './app.models';
 // This type is extended from default TableDescription type
 // Now we could use any configured custom column types (see app.module)
 // in any table definition.
-const table = (statusClick$: Subject<any>): AppModels.AppTableDescription => ({
+const table = (statusClick$: Subject<any>): AppModels.AppTableDefinition => ({
     cols: [
         {
             id: 'title',            

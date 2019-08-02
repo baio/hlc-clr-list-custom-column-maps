@@ -48,7 +48,7 @@ const tableDataProviderConfig: TableDataProviderConfig = {
 const customColumnsMap = { AppStatusColumn: StatusComponent };
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule, HlcClrTableModule.forRoot(customColumnsMap), ClrIconModule ],
+  imports: [ BrowserModule, FormsModule, HlcClrTableModule.forRoot({cells: customColumnsMap}), ClrIconModule ],
   declarations: [ AppComponent, TableComponent, StatusComponent ],
   bootstrap:    [ AppComponent ],
   entryComponents: [ StatusComponent ]
