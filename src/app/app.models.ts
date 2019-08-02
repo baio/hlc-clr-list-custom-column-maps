@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 export namespace AppModels {
 
   export interface AppStatusColumnProps {
-    status: Status;
+    status: Table.MapColumns.CellProp<Status>;
     clicked: Observable<any>
   }
 
@@ -20,6 +20,6 @@ export namespace AppModels {
   // But type script compiler will give errors if you will try to include this column in table definition,
   // since default TableDescription don't know anything about new custom map column types inside you 
   // application.
-  export type AppTableDefinition = TableDescription<Table.MapColumns.Column | AppStatusColumn>;
+  export type TableDefinition = TableDescription<Table.MapColumns.Column | AppStatusColumn>;
 
 }
